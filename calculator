@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+	const UsdToEur = 0.86
+	const UsdToRub = 79.73
+	const EurToRub = UsdToRub / UsdToEur
+
+	money := 100.0
+
+	fmt.Println("USD → EUR:", money*UsdToEur)
+	fmt.Println("USD → RUB:", money*UsdToRub)
+	fmt.Println("EUR → RUB:", money*EurToRub)
+}
