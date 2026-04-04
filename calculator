@@ -12,4 +12,5 @@ func main() {
 	fmt.Println("USD → EUR:", money*UsdToEur)
 	fmt.Println("USD → RUB:", money*UsdToRub)
 	fmt.Println("EUR → RUB:", money*EurToRub)
+	// Калькулятор валют
 }
