@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	const UsdToEur = 0.86
@@ -13,4 +16,30 @@ func main() {
 	fmt.Println("USD → RUB:", money*UsdToRub)
 	fmt.Println("EUR → RUB:", money*EurToRub)
 	// Калькулятор валют
+}
+
+// Функция для считывания ввода пользователя
+func getUserInput() (float64, string, string) {
+	var amount float64
+	var fromCurrency string
+	var toCurrency string
+
+	fmt.Print("Введите сумму: ")
+	fmt.Scan(&amount)
+
+	fmt.Print("Введите исходную валюту (USD, EUR, RUB): ")
+	fmt.Scan(&fromCurrency)
+	fromCurrency = strings.ToUpper(fromCurrency)
+
+	fmt.Print("Введите целевую валюту (USD, EUR, RUB): ")
+	fmt.Scan(&toCurrency)
+	toCurrency = strings.ToUpper(toCurrency)
+
+	return amount, fromCurrency, toCurrency
+}
+
+// Функция для расчета конвертации валют
+func convertCurrency(amount float64, from string, to string) float64 {
+	// TODO: Реализовать логику конвертации
+	return 0.0
 }
